@@ -32,9 +32,9 @@ print('Test data is ready!')
 async def run_benchmark(one_by_one: bool, database_connection: DataBaseTypeEnum):
     length_of_data = SETTINGS.NUM_OF_TEST_DATA
     step = int(SETTINGS.NUM_OF_TEST_DATA / 10)
-    if one_by_one:
-        length_of_data = int(SETTINGS.NUM_OF_TEST_DATA / 10)
-        step = int(SETTINGS.NUM_OF_TEST_DATA / 100)
+    # if one_by_one:
+    #     length_of_data = int(SETTINGS.NUM_OF_TEST_DATA / 10)
+    #     step = int(SETTINGS.NUM_OF_TEST_DATA / 100)
 
     nums_of_data = []
     times = []
@@ -59,7 +59,6 @@ async def run_benchmark(database_connection: DataBaseTypeEnum) -> Response:
 
     length_of_data = SETTINGS.NUM_OF_TEST_DATA
     step = int(SETTINGS.NUM_OF_TEST_DATA / 10)
-
 
     for i in range(0, length_of_data + step, step):
         if i == 0:
