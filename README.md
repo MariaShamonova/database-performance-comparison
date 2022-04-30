@@ -1,6 +1,12 @@
 # Backend
 
 
+### Install packages
+```
+pip install requirements.txt
+```
+
+
 ### Run FastAPI
 ```
 uvicorn main:app --reload
