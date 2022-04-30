@@ -1,24 +1,23 @@
-# frontend
+# Backend
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
+### Run FastAPI
 ```
-npm run serve
+uvicorn main:app --reload
 ```
 
-### Compiles and minifies for production
+### Run local server
+#### Install MongoDB
+- Download the binaries from the [MongoDB Download Center](https://www.mongodb.com/try/download)
+- Ensure the location of the binaries is in the PATH variable
+    ```
+    export PATH=<mongodb-install-directory>/bin:$PATH
+    ```
+- Run MongoDB
+    ```
+    mongod --dbpath <path to data directory>
+    ```
+### Running a local server using containerization technologies (Docker)
 ```
-npm run build
+docker-compose up -d
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
